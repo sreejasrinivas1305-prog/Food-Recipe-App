@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up - RecipeHub</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="auth-page">
+  <div class="auth-card">
+    <a class="logo center" href="index.html">🍴 RecipeHub</a>
+    <h1>Create Account</h1>
+    <p>Join RecipeHub and save your favourite recipes.</p>
+    <form id="signupForm">
+      <label>Full Name</label>
+      <input id="signupName" type="text" required placeholder="Enter your name">
+      <label>Email</label>
+      <input id="signupEmail" type="email" required placeholder="Enter your email">
+      <label>Password</label>
+      <input id="signupPassword" type="password" required minlength="4" placeholder="Minimum 4 characters">
+      <button class="btn full" type="submit">Create Account</button>
+    </form>
+    <p id="signupMessage" class="message"></p>
+    <p class="auth-link">Already have an account? <a href="login.html">Login</a></p>
+  </div>
+  <script src="js/auth.js"></script>
+</body>
+</html>

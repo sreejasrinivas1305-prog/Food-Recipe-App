@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipes - RecipeHub</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="navbar">
+    <a class="logo" href="index.html">🍴 RecipeHub</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="recipes.html">Recipes</a>
+      <a href="login.html">Login</a>
+      <a href="favorites.html">❤️ Favourites</a>
+      <a href="user.html">Dashboard</a>
+    </nav>
+  </header>
+
+  <main class="section">
+    <div class="page-heading">
+      <div><p class="eyebrow">RECIPE COLLECTION</p><h1>Explore Recipes</h1></div>
+      <a href="user.html" class="btn outline">User Dashboard</a>
+    </div>
+
+    <div class="search-box">
+      <input id="searchInput" type="text" placeholder="Search by recipe, ingredient, cuisine or diet...">
+      <select id="categoryFilter">
+        <option value="all">All Categories</option>
+        <option value="Indian">Indian</option>
+        <option value="Italian">Italian</option>
+        <option value="Healthy">Healthy</option>
+        <option value="Breakfast">Breakfast</option>
+        <option value="Dessert">Dessert</option>
+      </select>
+    </div>
+
+    <div id="recipeGrid" class="recipe-grid"></div>
+  </main>
+  <script src="js/recipes.js"></script>
+</body>
+</html>

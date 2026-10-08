@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Dashboard - RecipeHub</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="navbar">
+    <a class="logo" href="index.html">🍴 RecipeHub</a>
+    <nav><a href="recipes.html">Recipes</a><a href="favorites.html">❤️ Favourites</a><button id="logoutBtn" class="link-button">Logout</button></nav>
+  </header>
+  <main class="section">
+    <div class="dashboard-banner">
+      <p class="eyebrow">USER MODULE</p>
+      <h1 id="welcomeUser">Welcome!</h1>
+      <p>Discover recipes and manage your favourites.</p>
+    </div>
+    <div class="feature-grid">
+      <a href="recipes.html" class="feature clickable"><span>🍛</span><h3>Browse Recipes</h3><p>Explore all available recipes.</p></a>
+      <a href="favorites.html" class="feature clickable"><span>❤️</span><h3>My Favourites</h3><p>View recipes you have saved.</p></a>
+    </div>
+  </main>
+  <script src="js/auth.js"></script>
+  <script>
+    const current = JSON.parse(localStorage.getItem("currentUser"));
+    if (!current) {
+      alert("Please login first.");
+      window.location.href = "login.html";
+    } else {
+      document.getElementById("welcomeUser").textContent = "Welcome, " + current.name + "!";
+    }
+    document.getElementById("logoutBtn").addEventListener("click", function () {
+      localStorage.removeItem("currentUser");
+      window.location.href = "index.html";
+    });
+  </script>
+</body>
+</html>

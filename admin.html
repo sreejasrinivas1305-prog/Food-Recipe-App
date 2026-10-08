@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard - RecipeHub</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="navbar">
+    <a class="logo" href="index.html">🍴 RecipeHub</a>
+    <nav><a href="recipes.html">View App</a><button id="adminLogout" class="link-button">Logout</button></nav>
+  </header>
+
+  <main class="section">
+    <div class="dashboard-banner">
+      <p class="eyebrow">ADMIN MODULE</p>
+      <h1>Recipe Management Dashboard</h1>
+      <p>Add, edit and delete recipes from the application.</p>
+    </div>
+
+    <div class="admin-layout">
+      <section class="panel">
+        <h2 id="formTitle">Add New Recipe</h2>
+        <form id="recipeForm">
+          <input type="hidden" id="editId">
+          <label>Recipe Name</label><input id="recipeName" required>
+          <label>Category / Cuisine</label><input id="recipeCategory" placeholder="Indian" required>
+          <label>Diet</label><input id="recipeDiet" placeholder="Vegetarian" required>
+          <label>Ingredients</label><textarea id="recipeIngredients" required placeholder="Rice, vegetables, spices..."></textarea>
+          <label>Preparation Steps</label><textarea id="recipeSteps" required placeholder="1. Wash... 2. Cook..."></textarea>
+          <button class="btn" type="submit">Save Recipe</button>
+          <button class="btn outline hidden" type="button" id="cancelEdit">Cancel Edit</button>
+        </form>
+        <p id="adminActionMessage" class="message"></p>
+      </section>
+
+      <section class="panel">
+        <h2>Existing Recipes</h2>
+        <div id="adminRecipeList"></div>
+      </section>
+    </div>
+  </main>
+  <script src="js/admin.js"></script>
+</body>
+</html>
